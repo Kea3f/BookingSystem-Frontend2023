@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/BSfrontend.iml" filepath="$PROJECT_DIR$/.idea/BSfrontend.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/BookingSystem-Frontend2023.iml" filepath="$PROJECT_DIR$/.idea/BookingSystem-Frontend2023.iml" />
     </modules>
   </component>
 </project>

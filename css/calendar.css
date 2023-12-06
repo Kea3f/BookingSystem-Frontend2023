@@ -1,0 +1,81 @@
+:root {
+    --light-gray: #f1f0f0;
+    --light-blue: #949191;
+}
+
+body {
+    margin: 0;
+}
+
+#app-calendar {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    background-color: #e0e0e0;
+    height: 300px;
+    width: 400px;
+    margin-left: 710px;
+    margin-top: 20px;
+
+}
+
+
+h1{
+    text-align: center;
+    font-size: 45px;
+    margin-top: 150px;
+}
+
+.day {
+    border-bottom: 1px solid var(--light-gray);
+    border-right: 1px solid var(--light-gray);
+    text-align: center;
+    padding-top: 5px;
+    font-size: 12px;
+    cursor: pointer;
+    transition: background-color 200ms, color 200ms;
+}
+
+.name {
+    padding-bottom: 5px;
+}
+
+.calendar-button{
+    background-color: #fffefe;
+    margin-left: 20px;
+    margin-top: 20px;
+
+
+}
+
+.current-month {
+    font-size: 25px;
+    font-weight: bold;
+    margin-left: 820px;
+    margin-top: 60px;
+    color: black;
+}
+
+.calendar-button:nth-of-type(1) {
+    margin-left: 800px;
+}
+
+/* Add a new class for dates with bookings */
+.has-booking {
+    background-color: green; /* Adjust styling as needed */
+    color: white; /* Adjust text color for visibility */
+}
+
+
+.calendar-button:nth-of-type(2) {;
+
+}
+
+.weekend {
+    color: var(--light-blue)
+}
+
+.selected {
+    background-color: var(--light-blue);
+    color: white;
+}
