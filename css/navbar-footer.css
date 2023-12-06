@@ -1,0 +1,184 @@
+body {
+    margin: 0;
+    font-family: 'Lato', sans-serif;
+    background: linear-gradient(to bottom, #cac9c9 53%, #ffffff 100%);
+    height: 100vh;
+}
+
+#navbar {
+    overflow: hidden;
+    background-color: #CAC9C9;
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#navbar #navbarbuttons {
+    display: flex;
+
+}
+
+#navbar .navbar-button {
+    background: none;
+    border: none;
+    font-size: 17px;
+    cursor: pointer;
+    padding: 10px 15px;
+    margin-top: 11px;
+    margin-right: 10px;
+}
+
+#navbar .instagram-wrapper {
+    margin-top: 10px;
+    margin-right: 10px;
+}
+
+#logo-button {
+    max-width: 120px;
+    height: auto;
+    cursor: pointer;
+    margin-left: 50px;
+    margin-top: 10px;
+}
+
+#cancellationDropdown .dropdown-content {
+    display: none;
+    position: absolute;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+#cancellationDropdown:hover .dropdown-content {
+    display: block;
+}
+
+#cancellationDropdown ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+#cancellationDropdown li {
+    margin-bottom: 10px;
+    transition: background-color 0.3s;
+}
+
+#cancellationDropdown li a {
+    text-decoration: none;
+    color: inherit;
+}
+
+#cancellationDropdown li:hover {
+    background-color: #CAC9C9;
+    color: #fff;
+}
+
+#instagram {
+    width: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-left: 400px; /* Adjust this value as needed */
+    /* Other existing styles */
+}
+
+#loginbtn {
+    width: 70px;
+    height: 25px;
+    font-family: 'Lato', sans-serif;
+    font-weight: bold;
+    margin-top: 10px;
+    margin-right: 10px;
+    cursor: pointer;
+    display: inline-block;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    vertical-align: middle;
+    background-color: #e1e0e0;
+    border: none;
+    border-radius: 4px;
+    box-shadow: rgba(213, 217, 217, 0.5) 0 2px 5px 0;
+    color: #0f1111;
+    font-size: 13px;
+    padding: 0 10px 0 11px;
+    position: relative;
+    text-align: center;
+}
+
+#loginbtn:hover {
+    background-color: #f7fafa;
+}
+
+#loginbtn:focus {
+    border-color: #008296;
+    box-shadow: rgba(213, 217, 217, 0.5) 0 2px 5px 0;
+    outline: 0;
+}
+
+#instagrambtn {
+    background-color: transparent;
+    border: none;
+    font-size: 13px;
+    font-weight: bold;
+    line-height: 29px;
+    padding: 0 5px 0 5px;
+    margin-top: 15px;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    width: 300px;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.modal-content {
+    margin-bottom: 20px;
+}
+
+.modal-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+#modal3 {
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+#modal3 .modal-content {
+    padding: 20px;
+}
+
+#modal3 .modal-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    color: #000;
+
+
+
+
+
+
+}
+
+
+

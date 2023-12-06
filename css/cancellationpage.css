@@ -1,0 +1,19 @@
+body {
+    background: url('/static/img/lash.jpeg') no-repeat center center fixed;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+}
+
+.cancellation-text {
+    position: relative;
+    padding: 20px;
+    text-align: center;
+    margin: 70px auto 200px;
+    max-width: 600px;
+    background-color: rgba(169, 169, 169, 0.7);
+}
+
+h1 {
+    margin-bottom: 10px;
+}

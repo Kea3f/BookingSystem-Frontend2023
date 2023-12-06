@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Treatments</title>
+    <link rel="stylesheet" href="../static/css/treatments.css">
+    <link rel="stylesheet" href="../static/css/navbar-footer.css">
+    <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="../static/js/navbar-footer.js"></script>
+    <script src="../static/js/treatmentmodals.js"></script>
+</head>
+<body>
+
+<div id="navbar-footer"></div>
+
+<div class="cards-list">
+
+    <div class="frame" id="firstframe">
+        <div class="card" data-modal="modal1">
+            <div class="card_image">
+                <img src="/static/img/singlelashes.jpg" alt="Card Image" class="card-image-trigger"/>
+            </div>
+            <div class="card_title title-white">
+                <p class="modal-trigger">Single lashes</p>
+            </div>
+        </div>
+
+        <div class="card" data-modal="modal2">
+            <div class="card_image">
+                <img src="/static/img/yylashes.jpg" alt="Card Image" class="card-image-trigger yylashes-filter" id="yylashes">
+            </div>
+            <div class="card_title title-white">
+                <p class="modal-trigger">YY lashes</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="frame" id="secondframe">
+        <div class="card" data-modal="modal3">
+            <div class="card_image">
+                <img src="/static/img/hybridlashes.jpg" alt="Card Image" class="card-image-trigger"/>
+            </div>
+            <div class="card_title title-white">
+                <p class="modal-trigger">Hybrid lashes</p>
+            </div>
+        </div>
+
+        <div class="card" data-modal="modal4">
+            <div class="card_image">
+                <img src="/static/img/volumelashes.png" alt="Card Image" class="card-image-trigger"/>
+            </div>
+            <div class="card_title title-white">
+                <p class="modal-trigger">Volume lashes</p>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Modals-->
+<div id="modals-container">
+    <div class="modal" id="modal1">
+        <div class="modal-content">
+            <span class="modal-close" data-modal-close="modal1">&times;</span>
+            <h4>Single lashes</h4>
+            <p>
+                Experience the elegance of Single Lashes, where every strand is carefully applied to enhance your natural allure.
+                Delicate and precise, each lash creates a subtle, refined look that speaks volumes. Whether you prefer a minimalistic
+                touch or desire to amplify your gaze, Single Lashes offer a tailored beauty that's as unique as you are.
+                Elevate your eyes with the simplicity of Single Lashes – because true beauty often lies in the subtlety of grace."
+            </p>
+            <div class="pricing-info">
+                <p><strong>Single lashes:</strong> 400kr (new set)</p>
+                <p><strong>small refill:</strong> 300kr (There needs to be between 40-50 lashes left within 3 weeks)</p>
+                <p><strong>large opfyld:</strong> 350kr (There needs to be between 20-30% left within 2 weeks)</p>
+                <p><strong>Estimated time for these treatments:</strong> 2 hours</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="modals-container">
+    <div class="modal" id="modal2">
+        <div class="modal-content">
+            <span class="modal-close" data-modal-close="modal2">&times;</span>
+            <h4>YY lashes</h4>
+            <p>
+                Discover the magic of YY Lashes, where precision and allure unite.
+                Our expertly crafted lashes bring a touch of glamour to every blink,
+                enhancing your natural beauty with effortless elegance.
+                Whether you crave subtle charm or bold sophistication, YY Lashes elevate
+                your gaze to new heights. Embrace the beauty of simplicity with YY Lashes –
+                because your eyes deserve perfection."
+            </p>
+            <div class="pricing-info">
+                <p><strong>YY lashes:</strong> 450kr (new set)</p>
+                <p><strong>small refill:</strong> 350kr (There needs to be between 40-50 lashes left within 3 weeks)</p>
+                <p><strong>large opfyld:</strong> 400kr (There needs to be between 20-30% left within 2 weeks)</p>
+                <p><strong>Discount:</strong> with a mix of single lashes and YY lashes a 50 kr discount will be given</p>
+                <p><strong>Estimated time for these treatments:</strong> 2 hours</p>
+             </div>
+        </div>
+    </div>
+</div>
+
+<div id="modals-container">
+    <div class="modal" id="modal3">
+        <div class="modal-content">
+            <span class="modal-close" data-modal-close="modal3">&times;</span>
+            <h4>Hybrid lashes</h4>
+            <p>
+                Embark on a journey of enchantment with our Hybrid Lashes, a harmonious blend of classic and volume techniques.
+                Each lash is meticulously woven to create a seamless fusion of natural beauty and captivating glamour.
+                Whether you seek a subtle enhancement or a bold statement, Hybrid Lashes deliver a versatile allure that complements your unique style.
+                Elevate your gaze with the perfect balance of sophistication and charm –
+                choose Hybrid Lashes for a look that's effortlessly stunning."
+            </p>
+            <div class="pricing-info">
+                <p><strong>Hybrid lashes:</strong> 450kr (new set)</p>
+                <p><strong>small refill:</strong> 350kr (There needs to be between 40-50 lashes left within 3 weeks)</p>
+                <p><strong>large opfyld:</strong> 400kr (There needs to be between 20-30% left within 2 weeks)</p>
+                <p><strong>Estimated time for these treatments:</strong> 2 hours</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="modals-container">
+    <div class="modal" id="modal4">
+        <div class="modal-content">
+            <span class="modal-close" data-modal-close="modal4">&times;</span>
+            <h4>Volume lashes</h4>
+            <p>
+                Achieve Dramatic Glamour with Volume Lashes
+                Indulge in the luxurious allure of Volume Lashes, designed to captivate and mesmerize. Using advanced techniques,
+                multiple ultra-fine lashes are expertly crafted into handcrafted fans and delicately applied to each natural lash.
+                The result? A voluminous, full-bodied look that exudes glamour and sophistication. Whether you desire a subtle boost or bold statement,
+                Volume Lashes offer unparalleled depth and allure, elevating your beauty to new heights.
+            </p>
+            <div class="pricing-info">
+                <p><strong>Single lashes:</strong> 500kr (new set)</p>
+                <p><strong>small refill:</strong> 450kr (There needs to be between 40-50 lashes left within 3 weeks)</p>
+                <p><strong>large opfyld:</strong> 400kr (There needs to be between 20-30% left within 2 weeks)</p>
+                <p><strong>Estimated time for these treatments:</strong> 2 hours</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="booking">
+    <p>
+        To book your desired treatment go to the booking page - you will need to log in or sign up
+    </p>
+    <button class="booking-button">
+        <a href="booking.html" target="_blank">
+
+        </a>
+    </button>
+</div>
+
+<div id="needhelp">
+    <p>
+        If you need help deciding which treatment is best for you, you can reach out on instagram
+    </p>
+    <button class="button-instagram">
+        <a href="https://www.instagram.com/lashesbybiran/" target="_blank">
+            <i class="fab fa-instagram" style="color: #000000; font-size: 35px;"></i>
+        </a>
+    </button>
+</div>
+
+
+</body>
+</html>

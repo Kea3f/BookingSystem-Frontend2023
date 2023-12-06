@@ -1,0 +1,15 @@
+
+
+body {
+    font-family: "Times New Roman", Times, serif;
+    text-align: center;
+}
+
+.confirmation{
+    font-size: 14px; /* You can adjust the font size as needed */
+    margin-top: 35px;
+}
+
+.headline{
+    margin-top: 50px;
+}
