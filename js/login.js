@@ -6,7 +6,6 @@ document.addEventListener('DOMContentLoaded', function () {
     const openModal = () => {
         modal.style.display = 'block';
     };
-
     const closeModal = () => {
         modal.style.display = 'none';
     };

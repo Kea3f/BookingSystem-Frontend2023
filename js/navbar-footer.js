@@ -11,6 +11,7 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 
+
     // Event listeners for buttons
     document.getElementById('logo-button').addEventListener('click', function () {
         navigateTo('index.html');
