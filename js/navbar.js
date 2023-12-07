@@ -40,6 +40,7 @@ document.addEventListener('DOMContentLoaded', async function () {
         }
     }
 
+
     // Event listener for the dropdown button
     document.getElementById("dropdownBtnContact").addEventListener("click", function () {
         openDropdown();
@@ -122,3 +123,10 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 });
+
+
+window.openDropdown = openDropdown;
+window.closeDropdown = closeDropdown;
+window.navigateTo = navigateTo;
+window.toggleModal = toggleModal;
+window.generateNavbar = generateNavbar;
