@@ -1,13 +1,68 @@
 body {
-    background: linear-gradient(to bottom, #cac9c9 38%, #ffffff 100%);
-    min-height: 100vh;
+    background: linear-gradient(to bottom, #cac9c9 42%, #ffffff 100%);
+    min-height: 300vh;
     display: flex;
     flex-direction: column;
     font-family: 'Lato', sans-serif;
     align-items: center;
 }
 
-#booking {
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+
+* {
+    box-sizing: border-box;
+}
+
+
+h4 {
+    font-size: 40px;
+    font-weight:bold;
+    margin-top:20px;
+}
+
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+[class*="col-"] {
+    float: left;
+    padding: 15px;
+
+}
+
+#singlelashescontainer{
+    width:1000px;
+    text-align: left;
+    margin-top:120px;
+}
+
+.pricing-info{
+    width:1000px;
+    text-align: left;
+    border: 1px solid white;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.img{
+    margin-left:200px;
+    border-radius: 4px;
+}
+
+#booking, #needhelp {
     background-color: #ffffff;
     margin-bottom:40px;
     padding: 20px;
@@ -18,14 +73,10 @@ body {
     max-width: 800px; /* Set a maximum width for larger screens */
 }
 
-#needhelp {
-    background-color: #ffffff;
-    padding: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
-    text-align: center;
-    width: 70%;
-    max-width: 800px; /* Set a maximum width for larger screens */
+.booking-button{
+    background: none;
+    width: 20%;
+    height: 40%;
 }
 
 .button-instagram {
@@ -45,98 +96,7 @@ body {
     background-color: #e5bb22;
 }
 
-.cards-list {
-    z-index: 0;
-    width: 100%; /* Take up the full width */
-    margin-top: 50px; /* Adjust margin as needed */
-    display: flex;
-    justify-content: center; /* Center cards horizontally */
-    flex-wrap: wrap;
-}
 
-.frame {
-    width: 90%; /* Adjust width for smaller screens */
-    max-width: 400px; /* Set a maximum width for larger screens */
-    box-sizing: border-box;
-    padding: 20px;
-    margin-bottom: 20px; /* Add margin between frames */
-}
-
-.card {
-    margin: 20px; /* Adjust margin for spacing between cards */
-    width: 100%; /* Take up the full width */
-    max-width: 400px; /* Set a maximum width for larger screens */
-    height: 200px;
-    border-radius: 40px;
-    box-shadow: 5px 5px 30px 7px rgba(0, 0, 0, 0.25), -5px -5px 30px 7px rgba(0, 0, 0, 0.22);
-    cursor: pointer;
-    transition: 0.4s;
-}
-
-.card .card_image {
-    width: 100%;
-    height: 100%;
-    border-radius: 40px;
-    overflow: hidden;
-}
-
-.card .card_image img {
-    width: 100%;
-    height: 100%;
-    border-radius: 40px;
-    object-fit: cover;
-}
-
-.card .card_title {
-    text-align: center;
-    border-radius: 0px 0px 40px 40px;
-    font-family: sans-serif;
-    font-weight: bold;
-    font-size: 20px;
-    margin-top: -50px;
-    height: 40px;
-}
-
-.card:hover {
-    transform: scale(0.9, 0.9);
-    box-shadow: 5px 5px 30px 15px rgba(0, 0, 0, 0.25),
-    -5px -5px 30px 15px rgba(0, 0, 0, 0.22);
-}
-
-.title-white {
-    color: white;
-}
-
-.title-black {
-    color: black;
-}
-
-@media all and (max-width: 500px) {
-    .cards-list {
-        margin-top: 20px; /* Adjust margin for smaller screens */
-    }
-
-    .frame {
-        width: 100%; /* Take up the full width on smaller screens */
-        max-width: none; /* Remove max-width on smaller screens */
-    }
-}
-
-
-/* modal style */
-#modals-container {
-    display: flex;
-    justify-content: space-between;
-
-}
-
-.modal-content {
-    width: 100%; /* Adjust the width as needed */
-}
-
-.pricing-info {
-    width: 80%; /* Adjust the width as needed */
-}
 
 
 

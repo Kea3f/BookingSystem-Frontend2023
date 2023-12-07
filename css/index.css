@@ -65,7 +65,7 @@ body,
 }
 .item:nth-child(1) {
     margin-top: 85px;
-    background: url('/static/img/bookinglashcarousel.jpg');
+    background: url('/img/bookinglashcarousel.jpg');
     background-size: 1000px 650px;
     background-position: center center;
     background-repeat: no-repeat;
@@ -84,7 +84,7 @@ body,
 
 .item:nth-child(2) {
     margin-top:85px;
-    background: url('/static/img/treatments.jpg');
+    background: url('/img/treatments.jpg');
     background-size: contain;
     background-position: center center;
     background-repeat: no-repeat;
@@ -92,7 +92,7 @@ body,
 
 .item:nth-child(3) {
     margin-top: 85px;
-    background: url('/static/img/aftercarecarousel.webp');
+    background: url('/img/aftercarecarousel.webp');
     background-size: contain;
     background-position: center center;
     background-repeat: no-repeat;
