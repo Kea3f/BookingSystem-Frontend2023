@@ -3,6 +3,7 @@ body {
     font-family: 'Lato', sans-serif;
     background: linear-gradient(to bottom, #cac9c9 53%, #ffffff 100%);
     height: 100vh;
+    width: 100vw;
 }
 
 #navbar {
@@ -226,7 +227,6 @@ button[type="submit"]:hover {
     margin-top: 45px; /* Increase the margin-top for separation */
     margin-bottom: 30px; /* Increase the margin-bottom for separation */
 }
-
 
 .signup a:hover {
     text-decoration: underline;

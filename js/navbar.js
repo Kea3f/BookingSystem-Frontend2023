@@ -1,73 +1,45 @@
-
-function generateNavbar() {
-    // Fetch the content of navbar.html using AJAX or a server-side include
-    $.get('templates/navbar-footer.html', function (navbarContent) {
-        // Append the content to the navbar element
-        $('#navbar').html(navbarContent);
-    });
-}
-generateNavbar();
-
-document.addEventListener('DOMContentLoaded', function () {
-    const loginButton = document.getElementById('login-button');
-    const modal = document.getElementById('loginModal');
-    const closeModalBtn = modal.querySelector('.close');
-
-    const openModal = () => {
-        modal.style.display = 'block';
-    };
-
-    const closeModal = () => {
-        modal.style.display = 'none';
-    };
-
-    loginButton.addEventListener('click', openModal);
-
-    if (closeModalBtn) {
-        closeModalBtn.addEventListener('click', closeModal);
+document.addEventListener('DOMContentLoaded', async function () {
+    // Function to open the dropdown
+    function openDropdown() {
+        const dropdownContent = document.getElementById("cancellationDropdown");
+        if (dropdownContent) {
+            dropdownContent.style.display = "block";
+        }
     }
 
-    window.addEventListener('click', (event) => {
-        if (event.target === modal) {
-            closeModal();
+// Function to close the dropdown
+    function closeDropdown() {
+        const dropdownContent = document.getElementById("cancellationDropdown");
+        if (dropdownContent) {
+            dropdownContent.style.display = "none";
         }
-    });
-});
+    }
 
-document.addEventListener("DOMContentLoaded", function() {
-    const loginForm = document.getElementById("login-form");
+    // Function to navigate to a page
+    function navigateTo(page) {
+        window.location.href = page;
+    }
 
-    loginForm.addEventListener("submit", async function(event) {
-        event.preventDefault();
+    // Function to toggle the modal
+    function toggleModal() {
+        modal.style.display = modal.style.display === 'none' ? 'block' : 'none';
+    }
 
-        const email = document.getElementById("email").value;
-        const password = document.getElementById("password").value;
-
+    // Fetch and append navbar content
+    async function generateNavbar() {
         try {
-            const response = await fetch('https://bookingsystem.azurewebsites.net/api/customer/login', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify({ email, password })
-            });
-
+            const response = await fetch('templates/navbar-footer.html');
             if (response.ok) {
-                const authenticatedCustomer = await response.json();
-                // Perform actions after successful login, e.g., redirect to homepage
-                window.location.href = 'index.html';
+                const navbarContent = await response.text();
+                $('#navbar').html(navbarContent);
             } else {
-                // Handle unsuccessful login
-                alert("Login failed. Please check your credentials.");
+                console.error('Failed to load navbar content.');
             }
         } catch (error) {
-            console.error("Error occurred during login:", error);
-            alert("An error occurred during login. Please try again later.");
+            console.error('Error occurred during navbar content fetch:', error);
         }
-    });
-});
+    }
 
-document.addEventListener('DOMContentLoaded', function () {
     // Event listener for the dropdown button
     document.getElementById("dropdownBtnContact").addEventListener("click", function () {
         openDropdown();
@@ -88,10 +60,65 @@ document.addEventListener('DOMContentLoaded', function () {
     document.getElementById('aboutme-button').addEventListener('click', function () {
         navigateTo('aboutmepage.html');
     });
+
     document.getElementById('treatments-button').addEventListener('click', function () {
         navigateTo('treatments.html');
     });
+
     document.getElementById('booking-button').addEventListener('click', function () {
         navigateTo('booking.html');
+    });
+
+    // Modal related code
+    const loginButton = document.getElementById('login-button');
+    const modal = document.getElementById('loginModal');
+    const closeModalBtn = modal.querySelector('.close');
+
+    loginButton.addEventListener('click', toggleModal);
+
+    if (closeModalBtn) {
+        closeModalBtn.addEventListener('click', toggleModal);
+    }
+
+    window.addEventListener('click', (event) => {
+        if (event.target === modal) {
+            toggleModal();
+        }
+    });
+
+    // Generate navbar content
+    await generateNavbar();
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+    const loginForm = document.getElementById("login-form");
+
+    loginForm.addEventListener("submit", async function (event) {
+        event.preventDefault();
+
+        const email = document.getElementById("email").value;
+        const password = document.getElementById("password").value;
+
+        try {
+            const response = await fetch('https://bookingsystem.azurewebsites.net/api/customer/login', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({email, password})
+            });
+
+            if (response.ok) {
+                const authenticatedCustomer = await response.json();
+                // Perform actions after successful login, e.g., redirect to homepage
+                window.location.href = 'index.html';
+            } else {
+                // Handle unsuccessful login
+                alert("Login failed. Please check your credentials.");
+            }
+        } catch (error) {
+            console.error("Error occurred during login:", error);
+            alert("An error occurred during login. Please try again later.");
+        }
     });
 });
