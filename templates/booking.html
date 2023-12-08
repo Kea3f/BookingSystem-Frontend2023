@@ -2,9 +2,28 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Select Date and Time</title>
+    <script src="../js/booking.js"></script>
+
 </head>
 <body>
+<div class="container">
+    <h1>Select Date and Time</h1>
+
+    <!-- Calendar for selecting the date -->
+    <label for="bookingDate">Select Date:</label>
+    <input type="date" id="bookingDate" name="bookingDate">
+
+    <!-- Dropdown for selecting the time -->
+    <label for="bookingTime">Select Time:</label>
+    <select id="bookingTime" name="bookingTime">
+        <!-- Options will be dynamically populated -->
+    </select>
+
+    <!-- "Book Now" button -->
+    <button id="bookNowButton">Book Now</button>
+</div>
+
 
 </body>
 </html>

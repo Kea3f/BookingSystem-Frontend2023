@@ -2,7 +2,7 @@ import { isWeekend, getDayName } from "./date-helper.js";
 
 const calendar = document.querySelector("#app-calendar");
 const currentMonthDisplay = document.querySelector("#current-month");
-const currentDate = new Date();
+let currentDate = new Date();
 let currentMonth = currentDate.getMonth();
 let currentYear = currentDate.getFullYear();
 async function updateCalendarWithBookings() {
@@ -12,7 +12,6 @@ async function updateCalendarWithBookings() {
 
         document.querySelectorAll("#app-calendar .day").forEach(dayElement => {
             const day = parseInt(dayElement.textContent.trim(), 10);
-            let currentDate;
             currentDate = new Date(currentYear, currentMonth, day);
 
             const hasBookingForCurrentDay = bookings.some(booking => {

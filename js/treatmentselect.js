@@ -1,6 +1,3 @@
-
-
-
 fetch('https://bookingsystem.azurewebsites.net/api/treatment/treatmentList')
     .then(response => response.json())
     .then(data => {
@@ -53,6 +50,20 @@ fetch('https://bookingsystem.azurewebsites.net/api/treatment/treatmentList')
 
             treatmentCard.appendChild(cardBody);
             treatmentsContainer.appendChild(treatmentCard);
+        });
+
+        // Event listener kode her
+        const selects = document.querySelectorAll('select');
+
+        selects.forEach(select => {
+            select.addEventListener('change', function(event) {
+                const selectedOption = event.target.value;
+
+                if (selectedOption !== 'none') {
+                    const treatmentName = select.parentElement.querySelector('.card-title').textContent;
+                    window.location.href = `booking.html?treatment=${encodeURIComponent(treatmentName)}`;
+                }
+            });
         });
     })
     .catch(error => {
