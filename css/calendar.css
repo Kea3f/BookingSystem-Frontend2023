@@ -60,10 +60,9 @@ h1{
     margin-left: 800px;
 }
 
-/* Add a new class for dates with bookings */
 .has-booking {
     background-color: green; /* Adjust styling as needed */
-    color: white; /* Adjust text color for visibility */
+    color: #ffffff; /* Adjust text color for visibility */
 }
 
 
@@ -78,4 +77,34 @@ h1{
 .selected {
     background-color: var(--light-blue);
     color: white;
+}
+
+#calendar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-left: 100px; /* Juster afstanden fra venstre kant */
+    margin-top: 50px; /* Juster afstanden fra top */
+}
+
+#available-times-section {
+    margin-top: 20px; /* Tilføj lidt mellemrum */
+}
+
+h3 {
+    font-size: 20px; /* Juster skriftstørrelse */
+    margin-bottom: 10px; /* Lidt mellemrum under overskriften */
+}
+
+#available-times-list {
+    list-style: none; /* Fjern punktliste-stil fra ul */
+    padding: 0; /* Fjern indvendig padding fra ul */
+    margin: 0; /* Fjern ydre margin fra ul */
+}
+
+#current-month {
+    text-align: left; /* Juster teksten til venstre */
+    font-size: 25px;
+    font-weight: bold;
+    margin-top: 10px; /* Lidt mellemrum over måned/år */
 }

@@ -8,7 +8,7 @@ let currentYear = currentDate.getFullYear();
 
 async function updateCalendarWithBookings() {
     try {
-        const response = await fetch('http://localhost:2020/api/booking/all-bookings');
+        const response = await fetch('https://bookingsystem.azurewebsites.net/api/booking/bookings');
         const bookings = await response.json();
 
         document.querySelectorAll("#app-calendar .day").forEach(dayElement => {
@@ -16,17 +16,63 @@ async function updateCalendarWithBookings() {
             const currentDate = new Date(currentYear, currentMonth, day);
 
             const hasBookingForCurrentDay = bookings.some(booking => {
-                return new Date(booking.bookingDate).getTime() === currentDate.getTime();
+                const bookingDate = new Date(booking.bookingDate);
+                return (
+                    bookingDate.getFullYear() === currentYear &&
+                    bookingDate.getMonth() === currentMonth &&
+                    bookingDate.getDate() === day
+                );
             });
 
             if (hasBookingForCurrentDay) {
                 dayElement.classList.add("has-booking");
+                dayElement.addEventListener("click", () => {
+                    if (!dayElement.classList.contains("selected")) {
+                        const formattedDate = `${currentYear}-${(currentMonth + 1).toString().padStart(2, '0')}-${day.toString().padStart(2, '0')}`;
+                        fetchAvailableBookingTimes(formattedDate);
+                    }
+                });
+            } else {
+                dayElement.classList.remove("has-booking");
+                dayElement.removeEventListener("click", fetchAvailableBookingTimes);
             }
         });
     } catch (error) {
         console.error('Error fetching bookings:', error);
     }
 }
+
+function displayAvailableTimes(availableTimes) {
+    const availableTimesList = document.getElementById("available-times-list");
+    availableTimesList.innerHTML = ""; // Ryd tidligere indhold
+
+    if (availableTimes.length > 0) {
+        availableTimes.forEach(time => {
+            const listItem = document.createElement("li");
+            listItem.textContent = time;
+            availableTimesList.appendChild(listItem);
+        });
+    } else {
+        const noTimesListItem = document.createElement("li");
+        noTimesListItem.textContent = "No available booking times";
+        availableTimesList.appendChild(noTimesListItem);
+    }
+}
+
+async function fetchAvailableBookingTimes(selectedDate) {
+    try {
+        const response = await fetch(`https://bookingsystem.azurewebsites.net/api/booking/available-times?bookingDate=${selectedDate}`);
+        const availableTimes = await response.json();
+
+        // Vis starttidspunkter i listen ved siden af kalenderen
+        displayAvailableTimes(availableTimes);
+    } catch (error) {
+        console.error('Error fetching available booking times:', error);
+    }
+}
+
+
+
 
 function updateCalendar() {
     calendar.innerHTML = ""; // Clear existing calendar
