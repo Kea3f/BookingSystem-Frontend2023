@@ -2,94 +2,24 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Treatment List</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-    }
-    table {
-      width: 80%;
-      margin: 20px auto;
-      border-collapse: collapse;
-    }
-    th, td {
-      padding: 10px;
-      border: 1px solid #ccc;
-      text-align: center;
-    }
-    th {
-      background-color: #f2f2f2;
-    }
-    tr:nth-child(even) {
-      background-color: #f2f2f2;
-    }
-  </style>
+  <title>Behandlinger</title>
+  <!-- Bootstrap CSS-link -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="../js/treatmentselect.js"></script>
+  <link rel="stylesheet" href="../css/treatmentselect.css">
+
 </head>
 <body>
-<h1>Treatment List</h1>
-<table>
-  <thead>
+<div class="container">
+  <h1 class="mt-4 mb-4">Treatments</h1>
 
-  </thead>
-  <tbody id="employee-table-container"></tbody>
-</table>
+  <div class="card-deck" id="treatmentsContainer">
+    <!-- treatments will be showing here -->
+  </div>
+</div>
 
-
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    function fetchTreatmentData() {
-      const url = 'https://bookingsystem.azurewebsites.net/api/treatment/treatmentList';
-
-      fetch(url)
-              .then(response => {
-                if (response.ok) {
-                  return response.json();
-                } else {
-                  throw new Error('Failed to fetch data');
-                }
-              })
-              .then(data => {
-                const treatmentInfo = data.map(treatment => ({
-                  name: treatment.treatment_name,
-                  price: treatment.treatment_phoneNo,
-                  description: treatment.treatment_description,
-                }));
-
-                displayTreatmentInfo(treatmentInfo);
-              })
-              .catch(error => {
-                console.error('Error:', error);
-              });
-    }
-
-    function displayTreatmentInfo(treatmentInfo) {
-      const table = document.createElement('table');
-      const headerRow = table.insertRow(0);
-      headerRow.insertCell(0).textContent = 'Name';
-      headerRow.insertCell(1).textContent = 'Price';
-      headerRow.insertCell(2).textContent = 'Description';
-
-
-      treatmentInfo.forEach((treatment, index) => {
-        const row = table.insertRow(index + 1);
-        row.insertCell(0).textContent = treatment.name;
-        row.insertCell(1).textContent = treatment.price;
-        row.insertCell(2).textContent = treatment.description;
-      });
-
-      const tableContainer = document.getElementById('employee-table-container');
-      tableContainer.innerHTML = '';
-      tableContainer.appendChild(table);
-    }
-
-    // Call the fetchEmployeeData function when your page loads
-    fetchTreatmentData();
-  });
-
-
-
-</script>
+<!-- Bootstrap JavaScript-link
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="script.js"></script>
 </body>
 </html>

@@ -5,7 +5,6 @@ const currentMonthDisplay = document.querySelector("#current-month");
 const currentDate = new Date();
 let currentMonth = currentDate.getMonth();
 let currentYear = currentDate.getFullYear();
-
 async function updateCalendarWithBookings() {
     try {
         const response = await fetch('https://bookingsystem.azurewebsites.net/api/booking/bookings');
@@ -42,22 +41,32 @@ async function updateCalendarWithBookings() {
     }
 }
 
-function displayAvailableTimes(availableTimes) {
-    const availableTimesList = document.getElementById("available-times-list");
-    availableTimesList.innerHTML = ""; // Ryd tidligere indhold
 
-    if (availableTimes.length > 0) {
-        availableTimes.forEach(time => {
-            const listItem = document.createElement("li");
-            listItem.textContent = time;
-            availableTimesList.appendChild(listItem);
+function displayAvailableTimes(times) {
+    const availableTimesList = document.getElementById("available-times-list");
+    availableTimesList.innerHTML = ""; // Tøm listen, før vi opdaterer den
+
+    times.forEach(time => {
+        const listItem = document.createElement("li");
+        listItem.textContent = time;
+        listItem.classList.add("available-time");
+        listItem.addEventListener("click", () => {
+            const selectedTime = time; // Gem det valgte tidspunkt
+
+            // remove marking from all others timesslots
+            document.querySelectorAll(".available-time").forEach(item => item.classList.remove("selected"));
+
+            // marks the choosen time in UI
+            listItem.classList.add("selected");
+
+            // updates element det choosen time
+            document.getElementById("selected-time-display").textContent = `Selected Time: ${selectedTime}`;
         });
-    } else {
-        const noTimesListItem = document.createElement("li");
-        noTimesListItem.textContent = "No available booking times";
-        availableTimesList.appendChild(noTimesListItem);
-    }
+
+        availableTimesList.appendChild(listItem);
+    });
 }
+
 
 async function fetchAvailableBookingTimes(selectedDate) {
     try {
