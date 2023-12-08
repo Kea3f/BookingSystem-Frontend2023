@@ -12,7 +12,8 @@ async function updateCalendarWithBookings() {
 
         document.querySelectorAll("#app-calendar .day").forEach(dayElement => {
             const day = parseInt(dayElement.textContent.trim(), 10);
-            const currentDate = new Date(currentYear, currentMonth, day);
+            let currentDate;
+            currentDate = new Date(currentYear, currentMonth, day);
 
             const hasBookingForCurrentDay = bookings.some(booking => {
                 const bookingDate = new Date(booking.bookingDate);
