@@ -43,7 +43,7 @@ h4 {
 
 }
 
-#singlelashescontainer{
+#singlelashescontainer, #yylashescontainer, #hybridlashcontainer, #volumelashcontainer{
     width:1000px;
     text-align: left;
     margin-top:120px;
