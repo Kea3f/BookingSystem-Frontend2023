@@ -3,10 +3,10 @@ document.write(`
     <img src="/img/logo.png" onclick="location.href='../index.html'" style="cursor: pointer;" id="logo" alt="logo">
 
     <div id="navbarbuttons">
-        <button class="navbar-button aboutme-button" onclick="location.href='aboutmepage.html'">About me</button>
-        <button class="navbar-button aboutme-button" onclick="location.href='treatments.html'">Treatments</button>
-        <button class="navbar-button aftercare-button" onclick="location.href='aftercare.html'">Aftercare</button>
-        <button class="navbar-button booking-button" onclick="location.href='booking.html'">Booking</button>
+        <button class="navbar-button aboutme-button" onclick="location.href='../templates/aboutmepage.html'">About me</button>
+        <button class="navbar-button aboutme-button" onclick="location.href='../templates/treatments.html'">Treatments</button>
+        <button class="navbar-button aftercare-button" onclick="location.href='../templates/aftercare.html'">Aftercare</button>
+        <button class="navbar-button booking-button" onclick="location.href='../templates/booking.html'">Booking</button>
 
         <div class="dropdown" id="cancellationDropdown">
             <button class="navbar-button" id="dropdownBtnContact">Contact</button>
@@ -61,11 +61,11 @@ document.write(`
     </div>
 </div>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <link rel="stylesheet" href="../static/css/navbar-footer.css">
-    <link rel="stylesheet" href="../static/css/login.css">
+    <link rel="stylesheet" href="../css/navbar-footer.css">
+    <link rel="stylesheet" href="../css/login.css">
     <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="../static/js/navbar-footer.js"></script>
-    <script src="../static/js/password-modal.js"></script>
-    <script src="../static/js/login.js"></script>
+    <script src="../js/navbar-footer.js"></script>
+    <script src="../js/password-modal.js"></script>
+    <script src="../js/login.js"></script>
 `);
