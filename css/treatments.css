@@ -1,10 +1,8 @@
 body {
     background: linear-gradient(to bottom, #cac9c9 42%, #ffffff 100%);
     min-height: 300vh;
-    display: flex;
-    flex-direction: column;
     font-family: 'Lato', sans-serif;
-    align-items: center;
+
 }
 
 .col-1 {width: 8.33%;}
