@@ -6,7 +6,7 @@ document.write(`
         <button class="navbar-button aboutme-button" onclick="location.href='../templates/aboutmepage.html'">About me</button>
         <button class="navbar-button aboutme-button" onclick="location.href='../templates/treatments.html'">Treatments</button>
         <button class="navbar-button aftercare-button" onclick="location.href='../templates/aftercare.html'">Aftercare</button>
-        <button class="navbar-button booking-button" onclick="location.href='../templates/calendar.html.html'">Booking</button>
+        <button class="navbar-button booking-button" onclick="location.href='../templates/booking.html'">Booking</button>
 
         <div class="dropdown" id="cancellationDropdown">
             <button class="navbar-button" id="dropdownBtnContact">Contact</button>

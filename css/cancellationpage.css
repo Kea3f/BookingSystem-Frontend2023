@@ -1,8 +1,9 @@
 body {
-    background: url('/static/img/lash.jpeg') no-repeat center center fixed;
+    background: url('/img/lash.jpeg') no-repeat center center fixed;
     background-size: cover;
     margin: 0;
     padding: 0;
+    font-family: 'Lato', sans-serif;
 }
 
 .cancellation-text {

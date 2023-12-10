@@ -2,6 +2,7 @@ body {
     background: linear-gradient(to bottom, #cac9c9 42%, #ffffff 100%);
     min-height: 300vh;
     font-family: 'Lato', sans-serif;
+    align-items: center;
 
 }
 
